@@ -12,8 +12,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.apiVersion>5.6</sonar.apiVersion>
-        <jdk.min.version>1.8</jdk.min.version>
     </properties>
 
     <dependencies>
@@ -75,15 +76,6 @@
                     <pluginName>Sonar Stryker Plugin</pluginName>
                     <pluginDescription>Stryker mutation testing plugin for SonarQube</pluginDescription>
                     <basePlugin>javascript</basePlugin>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${jdk.min.version}</source>
-                    <target>${jdk.min.version}</target>
                 </configuration>
             </plugin>
             <plugin>
